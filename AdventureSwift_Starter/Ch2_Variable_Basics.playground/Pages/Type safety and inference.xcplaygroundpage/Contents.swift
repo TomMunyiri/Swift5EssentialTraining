@@ -15,12 +15,13 @@
  
 */
 // Type inference
-
+var currentHealth=90
 
 // Type annotation
-
+var characterName:Character
 
 // Type annotation + inference
-
+var characterName1:Character="c"
 
 // Multiple variables - type annotation shorthand
+var num1, num2, num3, num4 :Int

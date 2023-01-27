@@ -11,4 +11,13 @@
  
 [Previous Topic](@previous)                                                 [Next Topic](@next)
  */
+//I am a single line comment
 
+
+/*I am
+ a multi line
+ comment
+ */
+
+var statement="Hello Tom Mwas"
+print(statement)

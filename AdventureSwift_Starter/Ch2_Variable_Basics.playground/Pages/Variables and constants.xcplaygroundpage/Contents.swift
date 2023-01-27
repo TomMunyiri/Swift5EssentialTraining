@@ -15,4 +15,11 @@ Declaring variables in Swift depends on how you plan to use their values in your
  [Next Topic](@next)
  
 */
+var currentHealth=90
+let maxHealth=90
+currentHealth=100
+//maxHealth=110
+
+var num1=20, num2=30, num3=50, num4=20
+var string1="Tom", string2="Munyiri", string3="Mwangi"
 
