@@ -13,11 +13,16 @@
  [Previous Topic](@previous)                                                 [Next Topic](@next)
  
  */
+//Literal value=> the actual value being held in a variable Variable=>is the placeholder for the literal value. Holds reference in memory for the literal value
 // Declaring strings
-
-
+var myName="Tom"
+var mySurname:String="Munyiri"
+var myAge=27
+print("My name is",myName,mySurname)
 // Concatenation
-
+print("My name is",myName+" "+mySurname)
+mySurname+=" Mwangi"
+print("My surname is",mySurname)
 
 // String interpolation
-
+print("My full name is \(myName) \(mySurname). I am \(myAge) years old")
