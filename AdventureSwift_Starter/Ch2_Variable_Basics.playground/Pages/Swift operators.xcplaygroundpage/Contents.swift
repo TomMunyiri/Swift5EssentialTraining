@@ -12,13 +12,20 @@
  
  */
 // Arithmetic (+, -, /, *)
-
+var arithmetic=4+3+(4/2)*2
+print("Result is:",arithmetic)
 
 // Compound assignments (+=, -=, *=, /=, %=)
+var compound=4
+// long hand way
+//compound=compound+4
+//short hand way
+compound+=compound
+print("Compound result is:",compound)
 
-
-// Modulo (%)
-
+// Modulo (%) - Remainder after a division
+var modulo = 191 % 90
+print("Remainder is:",modulo)
 
 
 /*  Comparisons (==, !=, >, <, >=, <=)
