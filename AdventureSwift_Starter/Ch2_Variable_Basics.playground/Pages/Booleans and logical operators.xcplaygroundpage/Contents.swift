@@ -14,8 +14,22 @@
  
  */
 // Test variable
-
+var isActive = true
+var isPresent:Bool = true
 
 // Logical operators (!, &&, ||)
+
+if(isActive){
+    print("isActive")
+}
+if(!isActive){
+    print("!isActive")
+}
+if((isActive) || (!isActive)){
+    print("Either way")
+}
+if(isActive && isPresent){
+    print("isActive and isPresent")
+}
 
 
