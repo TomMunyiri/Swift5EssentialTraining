@@ -15,17 +15,24 @@
  
  */
 // 1
-
+var weaponClassification = "Guns"
+var characterName = "Tommy"
 // 2
-
+characterName+=" Munyiri"
+print(characterName)
 // 3
-
+var currentMana = 3.4567
 // 4
-
+var mannaPercentage = String(currentMana/100)
+print(mannaPercentage)
 // 5
-
+var debugStats = "24"
+print("My debug stats are:\n\(debugStats)")
 // 6
-
+var questAccepted = true
+var canQuest = true
 // 7
-
+var questStatus = questAccepted && canQuest
 // 8
+debugStats.append(contentsOf: "\(questStatus)")
+print(debugStats)
