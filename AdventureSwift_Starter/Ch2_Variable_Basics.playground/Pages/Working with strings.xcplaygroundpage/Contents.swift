@@ -13,13 +13,21 @@
  
  */
 // Test variable
-
+var dialogue="The in keeper's dialogue"
+var empty=""
 
 // String data
-
-
+print(dialogue.isEmpty)
+print(empty.isEmpty)
+print(dialogue.count)
+print(dialogue.contains("z"))
 // Append and Insert
-
+dialogue.append(contentsOf: ", we have appended")
+print(dialogue)
 
 // Remove and Split
+dialogue.removeLast()
+dialogue.removeFirst()
+dialogue.split(separator: ",")
+print(dialogue)
 

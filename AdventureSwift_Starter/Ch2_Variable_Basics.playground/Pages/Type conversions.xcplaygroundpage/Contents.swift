@@ -14,10 +14,15 @@
  
 */
 // Test variables
-
+var testVar = 5.8344
 
 // Explicit conversions
-
-
+var convertedInt = Int(testVar)
+var convertedString = String(testVar)
+print(convertedInt)
+print(convertedString)
 // Inferred conversion with operators
-
+var bankDeposit = 37 + 5.7584
+print(bankDeposit)
+var addition = testVar + Double(convertedInt)
+print(addition)
