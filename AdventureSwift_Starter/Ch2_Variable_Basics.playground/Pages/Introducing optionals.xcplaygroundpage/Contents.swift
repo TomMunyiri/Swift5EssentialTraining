@@ -13,7 +13,9 @@
 
 */
 // Creating optionals
-
-
+var isGathered:String? = "Hallo" //In swift this value is 'nil' . Same way we have 'null' in kotlin
+var isActive:Bool? = true
+print(isGathered)
 // Forced unwrapping
+print(isGathered!)
 
