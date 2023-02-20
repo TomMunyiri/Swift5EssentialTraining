@@ -16,8 +16,17 @@
   [Previous Topic](@previous)                                                 [Next Topic](@next)
  
  */
+struct Person{
+    var firstName:String
+    var secondName:String
+    var middleName:String
+}
 // Changing & appending items
-
+var persons = [Person]()
+var persons1 = Array<Person>()
+var person1 = Person(firstName: "Tom", secondName: "Mwangi", middleName: "Munyiri")
+persons1.append(person1)
+persons1.count
 
 //Inserting and removing items
 
