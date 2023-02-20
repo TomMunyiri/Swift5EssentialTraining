@@ -15,8 +15,8 @@
  
  */
 // Creating arrays
-
-
+var levelDifficulty:[String] = ["Easy","Moderate","Veteran"] //preferred way as it is more concise
+var syntax2: Array<String> = Array<String>() //common way even in other languages like kotlin and java
 // Count and isEmpty
 
 
