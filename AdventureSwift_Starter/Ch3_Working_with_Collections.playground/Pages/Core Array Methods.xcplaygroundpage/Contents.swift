@@ -28,11 +28,23 @@ var person1 = Person(firstName: "Tom", secondName: "Mwangi", middleName: "Munyir
 persons1.append(person1)
 persons1.count
 
-//Inserting and removing items
+var characterClasses = ["Tom","Mwangi","Munyiri"]
+characterClasses.append("Yusuf")
+characterClasses += ["Said"]
 
+//Inserting and removing items
+characterClasses.insert("Mwas", at:1)
+characterClasses.remove(at: 2)
+print(characterClasses)
 
 // Ordering and querying values
+characterClasses.sort()
+characterClasses.reverse()
 
+characterClasses.reversed()
+characterClasses.sorted()
 
+characterClasses.contains("Mwas")
+characterClasses.contains("mwas")
 // 2D arrays and subscripts
 
