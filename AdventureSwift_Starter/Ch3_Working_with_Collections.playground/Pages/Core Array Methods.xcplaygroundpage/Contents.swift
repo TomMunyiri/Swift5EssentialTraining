@@ -46,5 +46,9 @@ characterClasses.sorted()
 
 characterClasses.contains("Mwas")
 characterClasses.contains("mwas")
+
 // 2D arrays and subscripts
+//2D arrays contains other arrays as their values
+var skillTree: [[String]] = [["Toma","Mwas"],["Munyiri","Mumbi"]]
+var accessMumSkill = skillTree[1][1]
 
