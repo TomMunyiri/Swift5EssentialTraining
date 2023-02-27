@@ -15,6 +15,7 @@
  */
 // Test variables
 var activeQuests:Set<String> = ["Fetch Gemstones","Big Boss","The Undertaker","Granny Needs Firewood"]
-
+var completedQuests:Set<String> = ["Big Boss","All-4-One","The Hereafter"]
 // Set operations
+var commonQuests = activeQuests.intersection(completedQuests) //common values in both sets
 
