@@ -18,4 +18,11 @@ var activeQuests:Set<String> = ["Fetch Gemstones","Big Boss","The Undertaker","G
 var completedQuests:Set<String> = ["Big Boss","All-4-One","The Hereafter"]
 // Set operations
 var commonQuests = activeQuests.intersection(completedQuests) //common values in both sets
+var differentQuests = activeQuests.symmetricDifference(completedQuests) //the complete opposite of intersection, returns values that are not common in both sets
+var allQuests = activeQuests.union(completedQuests) //combines both sets. Also note that the duplicate values are removed and we remain with only one value for each element in the set
+var clippedQuests = activeQuests.subtracting(completedQuests)
+
+//activeQuests.formIntersection(completedQuests)
+//activeQuests.formSymmetricDifference(completedQuests)
+//activeQuests.formUnion(completedQuests)
 
