@@ -14,10 +14,16 @@
 
  */
 // Creating sets
-
+var activeQuests:Set<String> = ["Fetch Gemstones","Big Boss","The Undertaker","Granny Needs Firewood"] //Type inference in sets is a bit different. You have to put the Set keyword after the variable name so that the compiler does not assume it's an array
 
 // Inserting and removing elements
-
+activeQuests.insert("Only the Strong")
+activeQuests.remove("Big Boss")
+print(activeQuests)
 
 // More common methods
+
+activeQuests.contains("Fetch Gemstones")
+
+print(activeQuests.sorted())
 

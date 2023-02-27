@@ -14,7 +14,7 @@
 
  */
 // Test variables
-
+var activeQuests:Set<String> = ["Fetch Gemstones","Big Boss","The Undertaker","Granny Needs Firewood"]
 
 // Set operations
 
