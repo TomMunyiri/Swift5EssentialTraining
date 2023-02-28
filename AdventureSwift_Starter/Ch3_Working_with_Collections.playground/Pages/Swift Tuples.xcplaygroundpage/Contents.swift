@@ -18,11 +18,26 @@
  */
 // Simple tuple
 
+var uppercutAttack:(String,Int,Bool) = ("Upper Cut Attack",1,true)
+print(uppercutAttack)
+uppercutAttack.0
+uppercutAttack.1
+uppercutAttack.2
 
-
+//decompose or unpack tuple values into their own variable for clarity
+var (attack,damage,rechargeable) = uppercutAttack
+attack
+damage
+rechargeable
+print(rechargeable)
 
 // Naming tuple values
-
+var shieldStomp : (attack:String,damage:Int,rechargeable:Bool)
+shieldStomp.attack="test"
+shieldStomp.damage=46
+shieldStomp.rechargeable=false
+var fieldSmash = (attack:"Upper cut attack",damage:45,rechargeable:true)
+print(shieldStomp)
 
 // Naming values with type annotation
 
