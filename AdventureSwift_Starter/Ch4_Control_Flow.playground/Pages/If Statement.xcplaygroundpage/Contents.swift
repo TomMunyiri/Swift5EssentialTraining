@@ -17,7 +17,7 @@
 
  */
 // Test variables
-
+var number1 = 23
 
 // If statement (<, >, <=, >=, !=, ==)
 
