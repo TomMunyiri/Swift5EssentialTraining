@@ -15,18 +15,21 @@
  
  */
 // 1
-
+var shopItemsArray = ["Bread","Cooking Oil","Rice"]
+var shopItemsDictionary = ["Bread":60,"Cooking Oil":500,"Rice":130]
 // 2
-
+var containBiscuit = shopItemsArray.contains("Biscuit")
 // 3
-
+shopItemsArray.insert("Biscuit", at:3)
 // 4
-
+var selectedItem = shopItemsArray[2]
 // 5
-
+var selectedItemPrice = shopItemsDictionary[selectedItem]
 // 6
-
+var fullArmorSet:Set<String> = ["Fetch Gemstones","Big Boss","The Undertaker","Granny Needs Firewood"]
+var currentArmorSet:Set<String> = ["Big Boss","All-4-One","The Hereafter"]
 // 7
-
+fullArmorSet.subtract(currentArmorSet)
 // 8
-
+var armorPieceTuple = (name:"Tom",cost:234,canEquip:true)
+armorPieceTuple.canEquip
