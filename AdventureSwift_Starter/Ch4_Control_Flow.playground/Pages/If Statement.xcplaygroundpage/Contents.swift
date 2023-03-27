@@ -14,11 +14,29 @@
  + Add a fall-through case to account for all other possible outcomes
  
  [Next Topic](@next)
-
+ 
  */
 // Test variables
-var number1 = 23
-var number2 = "testWakatime"
+var hp = 23
+var maxHP = "testWakatime"
+var currentHealth = 95
+var maxHealth = 100
 
 // If statement (<, >, <=, >=, !=, ==)
 
+if currentHealth >= maxHealth {
+    print("HP is at maximum")
+}else if currentHealth <= 50 {
+    print("Boss unadedi. Catch some health")
+}
+else{
+    print("Your HP iko sawa bado")
+}
+
+if(hp<=50){
+    print("hp is less than or equal to 50")
+}
+
+if currentHealth > 90 || currentHealth <= maxHealth {
+    print("You are doing just fine...")
+}
