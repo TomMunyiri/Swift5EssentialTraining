@@ -15,7 +15,7 @@
 
  */
 // Test variables
-var itemGathered: String?
+var itemGathered: String? = "Diamond Longsword"
 var isShopOpen: Bool? = true
 
 var blacksmithShop: [String: Int] = ["Bottle": 10, "Shield": 15, "Ocarina": 100]
@@ -31,4 +31,24 @@ var questDirectory = [
 ]
 
 // Optional binding
+//here we are unwrapping and storing in a variable
+if let item = itemGathered{
+    print("You found a \(item)")
+}else{
+    print("No item found")
+}
+
+//unwrapping multiple optionals in the same line. The have to both be true. It's similar to && operator in an if statement
+if let shopOpen = isShopOpen, let searchedItem = blacksmithShop["Shield"]{
+    print("Shop open is \(shopOpen) and we have \(searchedItem)")
+}else{
+    print("Either the shop is not open or we do not have the item")
+}
+
+//use chaining. play around with the keys to see 
+if let fetchGemsObjective = questDirectory["Fetch Gemstones"]?["Objective"]{
+    print("Our objective is to \(fetchGemsObjective)")
+}else{
+    print("Objective does not exists")
+}
 
