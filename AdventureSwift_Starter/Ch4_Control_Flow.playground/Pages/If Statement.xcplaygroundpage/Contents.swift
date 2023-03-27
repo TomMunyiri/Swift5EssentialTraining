@@ -18,6 +18,7 @@
  */
 // Test variables
 var number1 = 23
+var number2 = "testWakatime"
 
 // If statement (<, >, <=, >=, !=, ==)
 
