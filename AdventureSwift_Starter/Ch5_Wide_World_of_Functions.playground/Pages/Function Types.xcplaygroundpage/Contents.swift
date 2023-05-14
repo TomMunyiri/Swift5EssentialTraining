@@ -13,7 +13,17 @@
 
  */
 // Function types
+func computeBonusDamage(baseDamage:Int)->Int{
+    return baseDamage * 4
+}
 
+// (Int)->Int ----- this is the function signature of the above function
 
-// Functions as parameters
-
+// Functions as parameters - This is the equivalent of high order functions in kotlin
+// These functions make our code cleaner and functions shorter and only do one thing. 
+func dealDamage(baseDamage:Int, bonusDamage: (Int) -> Int) -> Int{
+    let bonus  = bonusDamage(baseDamage)
+    print("Base Damage is: \(baseDamage) \nBonus Damage is \(bonus)")
+    return bonus
+}
+ print("Deal damage is \(dealDamage(baseDamage: 55, bonusDamage: computeBonusDamage))")
