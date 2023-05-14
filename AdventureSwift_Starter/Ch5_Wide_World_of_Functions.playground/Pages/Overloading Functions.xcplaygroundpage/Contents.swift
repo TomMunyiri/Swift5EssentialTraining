@@ -14,7 +14,20 @@
 
  */
 // Base function
+func attackEnemy(){
+    print("Initial function")
+}
 
+// Overloaded functions, kotlin has this too
+func attackEnemy(damage:Int){
+    print("The damage is \(damage)")
+}
 
-// Overloaded functions
+func attackEnemy(damage:Int, player:String)->Int{
+    return damage
+}
+
+attackEnemy()
+attackEnemy(damage: 5)
+print(attackEnemy(damage: 40, player: "Tom"))
 

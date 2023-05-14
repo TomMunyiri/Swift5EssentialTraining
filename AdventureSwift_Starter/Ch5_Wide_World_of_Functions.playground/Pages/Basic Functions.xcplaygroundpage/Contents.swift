@@ -14,4 +14,10 @@
  
  */
 // Basic function
+func findNearbyAlly(level:Int)->String{
+    print("Searching for ally with level \(level)")
+    return "Argus"
+}
 
+var nearbyAlly  = findNearbyAlly(level:5)
+print(nearbyAlly)
