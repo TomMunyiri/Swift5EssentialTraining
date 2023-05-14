@@ -16,13 +16,34 @@
  
  */
 // 1
-
+var lefthandWeapon:String? = "I am left hand"
+var righthandWeapon:String? = "I am right hand"
 // 2
-
+if let isRightHandWeapon = righthandWeapon, let isLeftHandWeapon  = lefthandWeapon{
+    print("Both \(isRightHandWeapon) and \(isLeftHandWeapon) are available")
+}else{
+    print("The weapons do not match")
+}
 // 3
-
+var playerExp: [String: Int] = ["Beginner": 10, "Intermediate": 15, "Senior": 20,"Principal": 32]
 // 4
-
 // 5
+for  (player, experience) in playerExp{
+    print("Player \(player) experience is \(experience)")
+    guard experience <= 1 else{
+        print("You are an experienced player")
+        continue
+    }
+    // 6
+    switch(experience){
+    case 32:
+        print("This Player \(player) experience is 32")
+    case 200..<500:
+        print("Player experience is between 200 and 500")
+    case (let localExp) where localExp>500:
+        print("Experience is greater than 500")
+    default:
+        print("None of the cases have been met")
+    }
+}
 
-// 6
