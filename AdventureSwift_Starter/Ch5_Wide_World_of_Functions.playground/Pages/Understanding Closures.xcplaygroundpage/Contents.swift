@@ -13,8 +13,18 @@
  [Previous Topic](@previous)                                                 [Next Topic](@next)
 
  */
-// Defining closures
-
-
+// Defining closures - these are lambdas in other languages like kotlin or JS
+// closureName, type, return type
+var closure : () -> () =  {}
 // Initializing closures
+var computeDamageBonus  = { (base:Int) -> Int in
+    return base * 4
+}
 
+//make the above simpler by letting the compiler infer the type
+var computeDamageBonusSimplerSyntax  = { base in
+    return base * 4
+}
+
+computeDamageBonus(25)
+computeDamageBonusSimplerSyntax(30)
