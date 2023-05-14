@@ -14,10 +14,28 @@
 
  */
 // Optional return value
+func setUpArenaMatch()->Bool?{
+    return nil
+}
+if let initSuccess = setUpArenaMatch(){
+    print("Level initialized \(initSuccess)")
+}else{
+    print("Something went terribly wrong")
+}
+// Multiple return values -- returns a tuple
+func setUpArenaMatch(levelName:String)->(success:Bool,secretItem:String){
+    print("Level \(levelName) initialized")
+    return (true,"Heads Up")
+}
+var levelDetails = setUpArenaMatch(levelName: "Pro")
+print(levelDetails.success)
+print(levelDetails.secretItem)
 
+// Default values - We can have default values just like we have in kotlin
+func setUpDefaultMatch(levelName:String="Match Fires", opponents:Int=3){
+    print("Level name is \(levelName) and it has \(opponents) opponents")
+}
 
-// Multiple return values
-
-
-// Default values
-
+setUpDefaultMatch()
+//we can also override default values
+setUpDefaultMatch(levelName: "Point Cruz",opponents: 5)
