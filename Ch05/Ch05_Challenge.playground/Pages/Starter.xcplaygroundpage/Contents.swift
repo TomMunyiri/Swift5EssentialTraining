@@ -15,16 +15,28 @@
  
  */
 // 1
-
+typealias Attack = (name:String, damage:Int)
 // 2
-
+func attackEnemy(damageParam:Int){
+    print("The damage is \(damageParam)")
+}
 // 3
-
+func attackEnemy(attack:Attack) -> String {
+    return attack.name
+}
 // 4
-
+attackEnemy(damageParam: 3)
+attackEnemy(attack: Attack("Dusk Attack",56))
 // 5
-
+typealias AttackClosure = ([Attack]) -> Void
+var attackValues = [Attack("Dusk Attack",56),Attack("Midday Attack",478),Attack("Sunrise Attack",32)]
 // 6
-
+func fetchPlayerAttacks(attackClosure:AttackClosure) {
+    attackClosure(attackValues)
+}
 // 7
-
+fetchPlayerAttacks { (attacks) in
+    for (name,damage) in attacks {
+        print("Name is: \(name) and Damage is: \(damage)")
+    }
+}
