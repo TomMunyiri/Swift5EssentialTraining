@@ -18,10 +18,22 @@
 var partyMembers = ["Harrison", "Steven", "Bob the Noob"]
 
 // Type alias as a return value
+typealias AttackTuple = (name:String,damage:Int,recheargable:Bool)
+typealias AttackString = [String]
 
+var sunriseAttack = AttackTuple("Sunrise",45,true)
+
+func levelUpAttack(baseAttack:AttackTuple) -> AttackTuple {
+    let increasedAttack : AttackTuple = (baseAttack.name,baseAttack.damage*4,baseAttack.recheargable)
+    return increasedAttack
+}
+
+var levelledUpAttack = levelUpAttack(baseAttack: sunriseAttack)
 
 // Type alias as a function parameter
-func activeMembers(completion: ([String]) -> Void) {
+//i think this thing called typealias simplifies closures in some way..below code has a simpler syntax than previous one which confused me and was irritating to read
+typealias ArrayClosure = ([String]) -> Void
+func activeMembers(completion: ArrayClosure) {
     completion(partyMembers)
 }
 
