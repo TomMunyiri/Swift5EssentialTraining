@@ -17,6 +17,10 @@
 
  */
 // Test class
+//public - can be freely accessed from the source file and from any module that inherits the parent module
+//internal - can be accessed by any source file within their defining module but nowhere else. Every entity in swift is defined as internal by default
+//fileprivate - can only be accessed inside their defining module
+//private - can only be accessed from their declaration scope
 class Adventurer {
     var name: String
     var specialMove: String?
