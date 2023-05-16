@@ -53,8 +53,27 @@ class Adventurer {
 }
 
 // Subclass
-
+class Ranger: Adventurer{
+    //Inheritance trickles from top to bottom
+    var classAdvantage: String
+    override class var credo: String{
+        return "To the King"
+    }
+    init(name:String, advantage: String){
+        //we have to initialize non optionals
+        self.classAdvantage = advantage
+        //please note the order. any properties are initialized before we call the parent's init..sio kama huko kotlin
+        super.init(name: name, maxHP: 150)
+    }
+    
+    override func printStats() {
+        print("\(self.name) Ranger. Advantage: \(classAdvantage)")
+    }
+}
 
 var player1 = Adventurer(name: "Harrison", maxHP: 99)
 player1.printStats()
 Adventurer.credo
+Ranger.credo
+var argonRanger = Ranger(name: "Tom", advantage: "Super")
+argonRanger.printStats()
