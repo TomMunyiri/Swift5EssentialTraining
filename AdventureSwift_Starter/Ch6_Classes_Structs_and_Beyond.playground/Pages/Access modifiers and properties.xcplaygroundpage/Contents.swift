@@ -26,9 +26,34 @@ class Adventurer {
     var specialMove: String?
     let maxHealth: Int
     
+    //computed variable
+    var healthLost: Int{
+        return maxHealth - health
+    }
+    
+    //type properties come in 2 flavors; static and class
+    static var maxActivePlayers = 10 //static types cannot be overridden in a subclass
+    class var myClassVar:String{
+        return "specialMove"
+    }
+    
+    fileprivate var health: Int
+    
     init(name: String, maxHP: Int) {
         self.name = name
         self.maxHealth = maxHP
+        self.health = maxHP
+    }
+    
+    var Health: Int{
+        get{
+            return health
+        }
+        set{
+            if(newValue <= 100){
+                health = newValue
+            }
+        }
     }
     
     convenience init(name: String) {
@@ -36,12 +61,16 @@ class Adventurer {
     }
     
     func printStats() {
-        print("Character: \(self.name), Health: \(self.maxHealth)")
+        print("Character: \(self.name), Health: \(self.health)/\(self.maxHealth)")
     }
 }
 
 var player1 = Adventurer(name: "Harrison", maxHP: 99)
 var player2 = Adventurer(name: "Steven")
+
+//these 2 belong to the Adventurer class
+Adventurer.maxActivePlayers
+Adventurer.myClassVar
 
 player1.printStats()
 player2.printStats()
