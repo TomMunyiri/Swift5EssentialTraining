@@ -34,3 +34,11 @@ var questDirectory = [
 
 // Creating the chain
 
+var rareDagger = Item(description: "A unique dagger of unknown origin",previousOwner: nil)
+//looks like the ?.let{} in kotlin
+if let owner = rareDagger.previousOwner?.name{
+    print("This item used to be owned by \(owner)")
+}else{
+    print("Looks like this item history is unknown")
+}
+
