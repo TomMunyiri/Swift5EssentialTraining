@@ -14,7 +14,38 @@
  [Previous Topic](@previous)                                                 [Next Topic](@next)
 
  */
-// Declaring a new struct
+// Declaring a new struct - similar to data class in kotlin
+/// <#Description#>
+struct Level {
+    var levelID:Int
+    var levelObjectives: [String]
+    var levelDescription:String{
+        return "Level ID: \(levelID)"
+    }
+    
+    init(levelID: Int,levelObjectives: [String]){
+        self.levelID = levelID
+        self.levelObjectives = levelObjectives
+    }
+    
+    func queryObjectives(){
+        for objective in objectives{
+            print(objective)
+        }
+    }
+    
+    mutating func completeObjective(index:Int){
+        levelObjectives.remove(at: index)
+    }
+    
+}
 
+var objectives = ["Find the lost cat","Collect all Gemstones","Defeat the Big Boss"]
+var level1 = Level(levelID: 1, levelObjectives: objectives)
+
+var defaultLevel = level1
+level1.completeObjective(index: 0)
+level1.queryObjectives()
+print(level1)
 
 // Value types again
