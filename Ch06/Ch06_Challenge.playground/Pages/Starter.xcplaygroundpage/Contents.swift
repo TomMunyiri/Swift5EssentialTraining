@@ -16,18 +16,40 @@
  
  */
 // 1
-
-// 2
-
+class Item {
+    var name: String
+    var price: Int
+    // 4
+    var secret: BonusEffect?
+    // 2
+    init(name:String,price:Int){
+        self.name = name
+        self.price = price
+    }
+}
 // 3
-
-// 4
-
+struct BonusEffect{
+    var bonus:Int
+}
 // 5
-
-// 6
-
+class Inventory{
+    var storedItems: [Item]
+    // 6
+    init(storedItems:[Item]){
+        self.storedItems = storedItems
+    }
+}
 // 7
-
+var bonusEffect = BonusEffect(bonus: 23)
+var unga = Item(name:"Unga",price:150)
+var juice = Item(name:"Juice",price:100)
+unga.secret = bonusEffect
 // 8
+var inventory = Inventory(storedItems: [unga,juice])
+if let bonusEffect = inventory.storedItems[0].secret?.bonus{
+    print("Bonus is available and it is \(bonusEffect)")
+}else{
+    print("Bonus is not available at all")
+}
+
 
