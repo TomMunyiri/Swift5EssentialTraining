@@ -15,15 +15,39 @@
  
  */
 // 1
-
+enum ActionError:Error{
+    case InsufficientMP
+    case OutOfRange
+    case UnknownError
+}
 // 2
-
 // 3
-
 // 4
-
 // 5
+func attackEnemy(mp:Int, distance: Double) throws -> Bool?{
+    guard mp>10 else{
+        throw ActionError.InsufficientMP
+    }
+    guard distance<5.89 else{
+        throw ActionError.OutOfRange
+    }
+    return true
+}
 
 // 6
+func propagateDataError() throws{
+    try attackEnemy(mp: 5, distance: 11.00)
+}
 
+do{
+    try propagateDataError()
+    print("All good bro")
+}catch ActionError.InsufficientMP{
+    print("Insufficient MP")
+}catch ActionError.OutOfRange{
+    print("Out of Range")
+}
 // 7
+if let isAttackEnemy = try? attackEnemy(mp: 10, distance: 5){
+    print("Enemy attacked")
+}

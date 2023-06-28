@@ -19,18 +19,45 @@ enum DataError: Error {
 }
 
 var loadDataPath = "tom/work/data.txt"
+var emptyString = ""
 
-func loadData(path: String) throws {
-    guard path.contains("/") else {
-        throw DataError.InvalidPath
-    }
-    
+func loadData(path: String) throws -> Bool? {
     guard !path.isEmpty else {
         throw DataError.EmptyPath
     }
+    
+    guard path.contains("/") else {
+        throw DataError.InvalidPath
+    }
+
+    return true
 }
 
 // Do-Catch statements
+do{
+    try loadData(path:emptyString)
+}catch is DataError{
+    print("Invalid or empty path detected")
+}catch{
+    print("Unknown error occurred")
+}
 
+if let dataLoaded = try? loadData(path: loadDataPath){
+    print("Data loaded successfully")
+}
 
-// Propagating errors
+// Propagating errors - pass our errors to other functions
+func propagateDataError() throws{
+    try loadData(path: emptyString)
+}
+
+do{
+    try propagateDataError()
+    print("Propagate data error successful")
+}catch DataError.EmptyPath{
+    print("Empty path detected")
+}catch DataError.InvalidPath{
+    print("Invalid path detected")
+}catch{
+    print("Unknown error")
+}
