@@ -14,7 +14,34 @@
 
  */
 // Raw values
+enum NonPlayableCharacters:String{
+    case Village = "Village value"
+    case BlackSmith = "BlackSmith value"
+    case Merchant = "Merchant value"
+}
 
+var blackSmith = NonPlayableCharacters.BlackSmith
+print(blackSmith.rawValue)
 
 // Associated values
+enum PlayerState{
+    case Alive
+    case KO(level:Int)
+    case Unknown(debugError:String)
+    
+    func evaluateCase(){
+        switch self{
+        case .Alive:
+            print("Still alive and kicking")
+        case .KO(let levelRestart):
+            print("Sorry, Back to level \(levelRestart)")
+        case .Unknown(let message):
+            print(message)
+        default:
+            print("Unknown case")
+        }
+    }
+}
+
+PlayerState.KO(level: 1).evaluateCase()
 
