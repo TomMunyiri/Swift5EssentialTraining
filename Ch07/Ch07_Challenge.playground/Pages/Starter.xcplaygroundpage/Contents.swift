@@ -46,6 +46,10 @@ do{
     print("Insufficient MP")
 }catch ActionError.OutOfRange{
     print("Out of Range")
+}catch ActionError.UnknownError{
+    print("Unknown error occurred")
+}catch{
+    print("Default error")
 }
 // 7
 if let isAttackEnemy = try? attackEnemy(mp: 10, distance: 5){
