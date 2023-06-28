@@ -52,6 +52,6 @@ do{
     print("Default error")
 }
 // 7
-if let isAttackEnemy = try? attackEnemy(mp: 10, distance: 5){
+if let isAttackEnemy = try? attackEnemy(mp: 55, distance: 5){
     print("Enemy attacked")
 }
