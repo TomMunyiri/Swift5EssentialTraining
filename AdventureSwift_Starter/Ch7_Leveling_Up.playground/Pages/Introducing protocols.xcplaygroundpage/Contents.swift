@@ -23,6 +23,21 @@ protocol Collectable{
     func collect()->Bool
 }
 
+extension Collectable{
+    var priceIncrease: Int{
+        return self.price * 10
+    }
+    
+    init(name:String){
+        self.init(withName: name, startingPrice: 100)
+    }
+    
+    func collect() -> Bool {
+        print("Default item could not be collected")
+        return false
+    }
+}
+
 protocol Usable{
     func use()
 }
@@ -52,3 +67,13 @@ class Item:Collectable{
 var item = Item(withName: "Unga", startingPrice:100)
 item.collect()
 item.use()
+var item2 = Item(name:"Antidote")
+item2.price
+
+extension String{
+    func fancyDebug(){
+        print("This string has \(self.count) characters")
+    }
+}
+
+item2.name.fancyDebug()
