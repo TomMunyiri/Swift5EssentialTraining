@@ -18,6 +18,7 @@ enum DataError: Error {
     case InvalidPath
 }
 
+var loadDataPath = "tom/work/data.txt"
 
 func loadData(path: String) throws {
     guard path.contains("/") else {
